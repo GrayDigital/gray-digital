@@ -1,3 +1,5 @@
+https://www.gatsbyjs.com/dashboard/e81387e5-5bfa-400c-9846-8245acf27f26/sites/c361e119-3b36-40e7-8b3a-0b3445bb4b54/settings/general#notification-deploys
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">

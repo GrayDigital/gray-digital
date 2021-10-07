@@ -6,6 +6,7 @@
   "author": "Ari Perez <ari@gray.digital>",
   "dependencies": {
     "gatsby": "^4.0.0-zz-next.2",
+    "gatsby-plugin-gatsby-cloud": "^4.0.0-zz-next.2",
     "gatsby-plugin-image": "2.0.0-zz-next.2",
     "gatsby-plugin-manifest": "^4.0.0-zz-next.2",
     "gatsby-plugin-offline": "5.0.0-zz-next.2",
