@@ -28,7 +28,7 @@ const Layout = ({ children }) => {
                 <HStack spacing="8">
                   <Box as="a" href="/" rel="home">
                     <StaticImage
-                      placeholder="blurred"
+                      placeholder="none"
                       layout="fixed"
                       width={107}
                       height={30}
@@ -46,7 +46,7 @@ const Layout = ({ children }) => {
                     <NavLink.Desktop>Insights</NavLink.Desktop>
                     <NavLink.Desktop>Contact</NavLink.Desktop>
                     <NavLink.Desktop active>[LN]</NavLink.Desktop>
-                    <Button colorScheme="blue" rounded="full">
+                    <Button bg="white" color="black" size="md" rounded="full">
                       Join Us
                     </Button>
                   </HStack>
