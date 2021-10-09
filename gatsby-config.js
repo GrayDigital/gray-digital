@@ -6,10 +6,10 @@ require("dotenv").config({
 
 module.exports = useGatsbyConfig(() => ({
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `Gray Digital`,
+    description: `Landing page for Gray Digital, LLC.`,
+    author: `Ari Perez & Randall Weidberg`,
+    siteUrl: `https://gray.digitla/`,
   },
   plugins: [
     "gatsby-plugin-image",
@@ -44,34 +44,28 @@ module.exports = useGatsbyConfig(() => ({
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `gray-digital`,
+        short_name: `gray-digital`,
         start_url: `/`,
-        background_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
+        background_color: `black`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/gray_digital_logo_white.png`, // This path is relative to the root of the site.
       },
     },
-    // {
-    //   resolve: "@chakra-ui/gatsby-plugin",
-    //   options: {
-    //     /**
-    //      * @property {boolean} [resetCSS=true]
-    //      * if false, this plugin will not use `<CSSReset />
-    //      */
-    //     resetCSS: true,
-    //     /**
-    //      * @property {boolean} [isUsingColorMode=true]
-    //      * if false, this plugin will not use <ColorModeProvider />
-    //      */
-    //     isUsingColorMode: true,
-    //   },
-    // },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: "@chakra-ui/gatsby-plugin",
+      options: {
+        /**
+         * @property {boolean} [resetCSS=true]
+         * if false, this plugin will not use `<CSSReset />
+         */
+        resetCSS: true,
+        /**
+         * @property {boolean} [isUsingColorMode=true]
+         * if false, this plugin will not use <ColorModeProvider />
+         */
+        isUsingColorMode: true,
+      },
+    },
   ],
 }));
