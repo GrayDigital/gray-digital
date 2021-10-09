@@ -1,11 +1,10 @@
-// src/@chakra-ui/gatsby-plugin/theme.js
-import { extendTheme } from "@chakra-ui/react"
+import { extendTheme } from "@chakra-ui/react";
 
 const colors = {
   colors: {
     primary: "black",
   },
-}
+};
 
 const styles = {
   styles: {
@@ -17,11 +16,11 @@ const styles = {
       a: {},
     },
   },
-}
+};
 
 const config = {
   initialColorMode: "dark",
   useSystemColorMode: false,
-}
+};
 
-export default extendTheme({ config, styles, colors })
+export default extendTheme({ config, styles, colors });

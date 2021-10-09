@@ -9,10 +9,10 @@ import {
   useFocusOnShow,
   VStack,
   useColorModeValue as mode,
-} from "@chakra-ui/react"
-import { HTMLMotionProps, motion, Variants } from "framer-motion"
-import * as React from "react"
-import FocusLock from "react-focus-lock"
+} from "@chakra-ui/react";
+import { HTMLMotionProps, motion, Variants } from "framer-motion";
+import * as React from "react";
+import FocusLock from "react-focus-lock";
 import {
   HiBookOpen,
   HiCloudDownload,
@@ -20,10 +20,10 @@ import {
   HiOutlineMenu,
   HiOutlineX,
   HiQuestionMarkCircle,
-} from "react-icons/hi"
-import { RemoveScroll } from "react-remove-scroll"
-import { Logo } from "./Logo"
-import { NavLink } from "./NavLink"
+} from "react-icons/hi";
+import { RemoveScroll } from "react-remove-scroll";
+import { Logo } from "./Logo";
+import { NavLink } from "./NavLink";
 
 const variants: Variants = {
   show: {
@@ -38,7 +38,7 @@ const variants: Variants = {
     transition: { duration: 0.1, ease: "easeIn" },
     transitionEnd: { display: "none" },
   },
-}
+};
 
 const Backdrop = ({ show }: { show?: boolean }) => (
   <Portal>
@@ -59,10 +59,10 @@ const Backdrop = ({ show }: { show?: boolean }) => (
       }}
     />
   </Portal>
-)
+);
 
 const Transition = (props: HTMLMotionProps<"div"> & { in?: boolean }) => {
-  const { in: inProp, ...rest } = props
+  const { in: inProp, ...rest } = props;
   return (
     <motion.div
       {...rest}
@@ -79,13 +79,13 @@ const Transition = (props: HTMLMotionProps<"div"> & { in?: boolean }) => {
         zIndex: 1,
       }}
     />
-  )
-}
+  );
+};
 
 export const MobileNav = () => {
-  const [show, { toggle, off }] = useBoolean()
-  const ref = React.useRef<HTMLDivElement>(null)
-  useFocusOnShow(ref, { visible: show, shouldFocus: true })
+  const [show, { toggle, off }] = useBoolean();
+  const ref = React.useRef<HTMLDivElement>(null);
+  useFocusOnShow(ref, { visible: show, shouldFocus: true });
 
   return (
     <>
@@ -107,7 +107,7 @@ export const MobileNav = () => {
         </RemoveScroll>
         <FocusLock disabled={!show} returnFocus>
           <Box
-            bg={mode("white", "gray.700")}
+            bg={mode("white", "black")}
             shadow="lg"
             rounded="lg"
             ref={ref}
@@ -156,5 +156,5 @@ export const MobileNav = () => {
         </FocusLock>
       </Transition>
     </>
-  )
-}
+  );
+};

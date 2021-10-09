@@ -1,8 +1,10 @@
+const { useGatsbyConfig } = require("gatsby-plugin-ts-config");
+
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
-module.exports = {
+module.exports = useGatsbyConfig(() => ({
   siteMetadata: {
     title: `Gatsby Default Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
@@ -53,23 +55,23 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: "@chakra-ui/gatsby-plugin",
-      options: {
-        /**
-         * @property {boolean} [resetCSS=true]
-         * if false, this plugin will not use `<CSSReset />
-         */
-        resetCSS: true,
-        /**
-         * @property {boolean} [isUsingColorMode=true]
-         * if false, this plugin will not use <ColorModeProvider />
-         */
-        isUsingColorMode: true,
-      },
-    },
+    // {
+    //   resolve: "@chakra-ui/gatsby-plugin",
+    //   options: {
+    //     /**
+    //      * @property {boolean} [resetCSS=true]
+    //      * if false, this plugin will not use `<CSSReset />
+    //      */
+    //     resetCSS: true,
+    //     /**
+    //      * @property {boolean} [isUsingColorMode=true]
+    //      * if false, this plugin will not use <ColorModeProvider />
+    //      */
+    //     isUsingColorMode: true,
+    //   },
+    // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+}));
