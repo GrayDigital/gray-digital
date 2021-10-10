@@ -6,6 +6,8 @@ jobs:
     steps:
       - name: slack - GitHub Actions Slack integration
         uses: act10ns/slack@v1.2.2
+        with:
+          status: ${{ job.status }}
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
       - uses: actions/checkout@v1
