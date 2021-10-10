@@ -1,10 +1,9 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import { ColorModeScript, ChakraProvider } from "@chakra-ui/react";
 
-import Header from "./Header";
+import { Header } from "./Header";
 
-const Layout: React.FC = ({ children }) => {
+export const Layout: React.FC = ({ children }) => {
   return (
     <>
       <Header />
@@ -16,5 +15,3 @@ const Layout: React.FC = ({ children }) => {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 };
-
-export default Layout;

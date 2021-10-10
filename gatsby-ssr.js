@@ -1,7 +1,17 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/ssr-apis/
- */
+import React from "react";
+import { ColorModeScript } from "@chakra-ui/react";
+import { WrapRootElement } from "./src/components/WrapRootElement";
+import theme from "./src/@chakra-ui/theme";
 
-// You can delete this file if you're not using it
+export const onRenderBody = ({ setPreBodyComponents }) => {
+  setPreBodyComponents([
+    <ColorModeScript
+      initialColorMode={theme.config.initialColorMode}
+      key="chakra-ui-no-flash"
+    />,
+  ]);
+};
+
+export const wrapRootElement = ({ element }, pluginOptions) => {
+  return <WrapRootElement element={element} {...pluginOptions} />;
+};

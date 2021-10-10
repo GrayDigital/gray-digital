@@ -24,7 +24,7 @@ const DesktopNavLink = (props: DesktopNavLinkProps) => {
       href="#"
       aria-current={active ? "page" : undefined}
       fontWeight="semibold"
-      color={mode("black", "white")}
+      color="white"
       {...rest}
       _activeLink={{
         color: mode("blue.600", "blue.300"),

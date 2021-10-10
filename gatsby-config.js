@@ -52,20 +52,5 @@ module.exports = useGatsbyConfig(() => ({
         icon: `src/images/gray_digital_logo_white.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: "@chakra-ui/gatsby-plugin",
-      options: {
-        /**
-         * @property {boolean} [resetCSS=true]
-         * if false, this plugin will not use `<CSSReset />
-         */
-        resetCSS: true,
-        /**
-         * @property {boolean} [isUsingColorMode=true]
-         * if false, this plugin will not use <ColorModeProvider />
-         */
-        isUsingColorMode: true,
-      },
-    },
   ],
 }));

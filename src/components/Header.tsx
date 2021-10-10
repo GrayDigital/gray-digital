@@ -1,22 +1,15 @@
-import {
-  Box,
-  Flex,
-  HStack,
-  Button,
-  useColorModeValue as mode,
-} from "@chakra-ui/react";
+import { Box, Flex, HStack, Button } from "@chakra-ui/react";
 import * as React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { MobileNav } from "./MobileNav";
 import { NavLink } from "./NavLink";
 import { Link as GatsbyLink } from "gatsby";
-import { Icon } from "@chakra-ui/react";
 import { GrLinkedinOption } from "@react-icons/all-files/gr/GrLinkedinOption";
 
-const Header = () => {
+export const Header = () => {
   return (
     <Box minH="480px">
-      <Box as="header" bg={mode("white", "black")} borderBottomWidth="1px">
+      <Box as="header">
         <Box maxW="7xl" mx="auto" py="4" px={{ base: "6", md: "8" }}>
           <Flex as="nav" justify="space-between">
             <HStack spacing="8">
@@ -58,5 +51,3 @@ const Header = () => {
     </Box>
   );
 };
-
-export default Header;

@@ -3,7 +3,7 @@ import { Link as GatsbyLink, PageProps } from "gatsby";
 import { Box, Text, Link, VStack, Code, Grid } from "@chakra-ui/react";
 import { StaticImage } from "gatsby-plugin-image";
 
-import Layout from "../components/layout";
+import { Layout } from "../components/Layout";
 
 const Careers = (props: PageProps) => (
   <Layout>
