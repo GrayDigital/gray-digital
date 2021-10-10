@@ -4,6 +4,10 @@ jobs:
   chromatic-deployment:
     runs-on: ubuntu-latest
     steps:
+      - name: slack - GitHub Actions Slack integration
+        uses: act10ns/slack@v1.2.2
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
       - uses: actions/checkout@v1
       - name: Install dependencies
         run: yarn
