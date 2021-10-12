@@ -1,8 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-
 import { Header } from "./Header";
-import { WrapRootElement } from "./WrapRootElement";
+
 export default {
   title: "Header",
   component: Header,
