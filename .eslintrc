@@ -1,5 +1,10 @@
 {
-  "plugins": ["prettier", "@typescript-eslint", "eslint-plugin-tsdoc"],
+  "plugins": [
+    "prettier",
+    "@typescript-eslint",
+    "eslint-plugin-tsdoc",
+    "package-json"
+  ],
   "rules": {
     "tsdoc/syntax": "warn"
   },
