@@ -19,7 +19,7 @@
     "gatsby-plugin-offline": "5.0.0-zz-next.2",
     "gatsby-plugin-react-helmet": "5.0.0-zz-next.2",
     "gatsby-plugin-sharp": "^4.0.0-zz-next.4",
-    "gatsby-source-filesystem": "^4.0.0-zz-next.3",
+    "gatsby-source-filesystem": "^4.0.0",
     "gatsby-transformer-sharp": "^4.0.0-zz-next.8",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
