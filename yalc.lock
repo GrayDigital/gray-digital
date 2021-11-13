@@ -1,0 +1,10 @@
+{
+  "version": "v1",
+  "packages": {
+    "@graydigital/storybook": {
+      "version": "0.0.1",
+      "signature": "863ad8629f369c758f8d7ce19d20bb33",
+      "file": true
+    }
+  }
+}
