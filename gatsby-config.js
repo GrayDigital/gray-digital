@@ -12,6 +12,7 @@ module.exports = useGatsbyConfig(() => ({
     siteUrl: `https://gray.digitla/`,
   },
   plugins: [
+    `gatsby-plugin-percy`,
     "gatsby-plugin-image",
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-react-helmet`,
