@@ -13,7 +13,7 @@ jobs:
       - name: install dependencies
         run: npm ci
       - name: build gatsby
-        run: nnpm run build
+        run: npm run build
       - name: run percy
         run: npm run percy
         env:
