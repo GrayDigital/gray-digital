@@ -10,9 +10,9 @@ jobs:
         with:
           node-version: "14"
           cache: "npm"
-      - name: rnstall dependencies
+      - name: install dependencies
         run: npm ci
       - name: run percy
-        run: percy exec -- gatsby build
+        run: npm run percy exec -- gatsby build
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}

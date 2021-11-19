@@ -66,6 +66,7 @@
     "clean": "gatsby clean",
     "cy:open": "cypress open",
     "cy": "cypress run",
+    "percy": "percy exec -- gatsby build",
     "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open"
   },
   "repository": {
