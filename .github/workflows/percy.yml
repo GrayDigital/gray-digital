@@ -10,6 +10,7 @@ jobs:
         with:
           node-version: "14"
           cache: "npm"
+          fetch: 0
       - name: install dependencies
         run: npm ci
       - name: run percy
