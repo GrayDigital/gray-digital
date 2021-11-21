@@ -71,5 +71,3 @@ storybook-static
 
 .yalc*
 yalc.lock
-
-.env.local
