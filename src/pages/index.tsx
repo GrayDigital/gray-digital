@@ -18,13 +18,25 @@ const IndexPage = (props: PageProps) => {
         title {
           title
         }
+        image {
+          gatsbyImageData
+        }
       }
     }
   `);
 
+  const image = getImage(data.contentfulLandingPageHero.image);
+
   return (
     <Layout>
-      <HomepageHero link={{ text: "Our Services", target: "/services" }} />
+      <HomepageHero
+        Image={() => (
+          <GatsbyImage image={image} alt={"[ToDo: add alt logo from CMS"} />
+        )}
+        title={data.contentfulLandingPageHero.title.title}
+        subtitle={data.contentfulLandingPageHero.subtitle.subtitle}
+        link={{ text: "Our Services", target: "/services" }}
+      />
       {/* TODO: Brands should be fed in from an external source. i.e. Headless CMS request */}
       <Brands />
       <Hero link={{ text: "Our Mission", target: "/company" }} />
