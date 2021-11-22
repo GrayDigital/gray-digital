@@ -1,41 +1,35 @@
-const { useGatsbyConfig } = require("gatsby-plugin-ts-config");
-
 require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
+  // path: `.env.${process.env.NODE_ENV}`,
+  path: `.env`,
 });
 
-module.exports = useGatsbyConfig(() => ({
+module.exports = {
   siteMetadata: {
     title: `Gray Digital`,
     description: `Landing page for Gray Digital, LLC.`,
-    author: `Ari Perez & Randall Weidberg`,
-    siteUrl: `https://gray.digitla/`,
+    author: `Ari Perez & Randall Weidberg & Brandon Clapp`,
+    siteUrl: `https://gray.digital/`,
   },
   plugins: [
-    `gatsby-plugin-percy`,
+    {
+      resolve: "@chakra-ui/gatsby-plugin",
+      options: {
+        /**
+         * @property {boolean} [resetCSS=true]
+         * if `false`, this plugin will not use `<CSSReset />
+         */
+        resetCSS: true,
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `ap1mxri861el`,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
     "gatsby-plugin-image",
-    `gatsby-plugin-gatsby-cloud`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-image`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gray-digital`,
-        short_name: `gray-digital`,
-        start_url: `/`,
-        background_color: `black`,
-        display: `minimal-ui`,
-        icon: `src/images/gray_digital_logo_white.png`, // This path is relative to the root of the site.
-      },
-    },
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
   ],
-}));
+};

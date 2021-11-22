@@ -1,16 +1,31 @@
 import * as React from "react";
-import PropTypes from "prop-types";
-
 import { Header } from "@graydigital/storybook";
-import logo from "../images/gray_digital_logo_white.png";
-
+import { useStaticQuery, graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 export const Layout: React.FC = ({ children }) => {
+  const data = useStaticQuery(graphql`
+    {
+      contentfulHeaderMenu(
+        title: {}
+        contentful_id: { eq: "HAtlPdiuqVPAag5Rg8bOs" }
+      ) {
+        title
+        logoAlt
+        logo {
+          gatsbyImageData(width: 107, height: 30)
+        }
+      }
+    }
+  `);
+
+  const image = getImage(data.contentfulHeaderMenu.logo);
+
   return (
     <>
       <Header
         LogoImage={() => (
-          <img width={107} height={30} src={logo} alt="gray logo" />
+          <GatsbyImage image={image} alt={data.contentfulHeaderMenu.logoAlt} />
         )}
         Link={() => <a href="/careers">Join Us</a>}
         asLogoLink={null}
@@ -18,8 +33,4 @@ export const Layout: React.FC = ({ children }) => {
       <main>{children}</main>
     </>
   );
-};
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 };

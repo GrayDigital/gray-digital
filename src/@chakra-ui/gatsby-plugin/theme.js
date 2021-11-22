@@ -1,6 +1,6 @@
+// src/@chakra-ui/gatsby-plugin/theme.js
 import { extendTheme } from "@chakra-ui/react";
-
-export default extendTheme({
+const theme = {
   config: {
     initialColorMode: "dark",
     useSystemColorMode: false,
@@ -17,4 +17,6 @@ export default extendTheme({
   colors: {
     primary: "black",
   },
-});
+};
+
+export default extendTheme(theme);
