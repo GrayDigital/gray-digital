@@ -14,8 +14,6 @@ jobs:
         run: npm ci
       - name: build gatsby
         run: npm run build
-        env:
-          CONTENTFUL_ACCESS_TOKEN: rTwgJ6hxPN49dVUzep-yb4FeeITMe1TmVYhmnM1nIYg
       - name: run percy
         run: npm run percy
         env:
