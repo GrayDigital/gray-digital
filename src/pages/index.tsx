@@ -18,7 +18,6 @@ const IndexPage = (props: PageProps) => {
       contentfulLandingPageHero(
         contentful_id: { eq: "1WqXe4AOqePnuFXlxsOZvB" }
       ) {
-        contentful_id
         subtitle {
           subtitle
         }
@@ -29,23 +28,37 @@ const IndexPage = (props: PageProps) => {
           gatsbyImageData
         }
       }
+      contentfulBrands(contentful_id: { eq: "0ziBhkVyT4DbToTlNQ2Ng" }) {
+        title
+        images {
+          gatsbyImageData
+          title
+        }
+      }
     }
   `);
-
-  const image = getImage(data.contentfulLandingPageHero.image);
 
   return (
     <Layout>
       <HomepageHero
         Image={() => (
-          <GatsbyImage image={image} alt={"[ToDo: add alt logo from CMS"} />
+          <GatsbyImage
+            image={getImage(data.contentfulLandingPageHero.image)}
+            alt={"[ToDo: add alt logo from CMS"}
+          />
         )}
         title={data.contentfulLandingPageHero.title.title}
         subtitle={data.contentfulLandingPageHero.subtitle.subtitle}
         link={{ text: "Our Services", target: "/services" }}
       />
-      {/* TODO: Brands should be fed in from an external source. i.e. Headless CMS request */}
-      <Brands />
+      <Brands
+        title={data.contentfulBrands.title}
+        Logos={data.contentfulBrands.images.map((image) => {
+          return (
+            <GatsbyImage image={getImage(image)} alt={image.description} />
+          );
+        })}
+      />
       <Mission link={{ text: "Our Mission", target: "/company" }} />
       <Studies
         link={{
@@ -53,7 +66,6 @@ const IndexPage = (props: PageProps) => {
           target: "/work/department-of-homeland-security-assessment-generator",
         }}
       />
-
       <SideBySide
         title="We're solving big problems"
         content="Our technologists have developed products to improve veterans'
@@ -67,7 +79,6 @@ const IndexPage = (props: PageProps) => {
         imageUrl="/static/american_flag.jpeg"
         contentOn="right"
       ></SideBySide>
-
       <Box py="8" bg="#f5f5f4">
         <SideBySide
           title="A people-first company"
