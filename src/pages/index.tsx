@@ -9,7 +9,7 @@ import {
   Studies,
   HomepageHero,
   Brands,
-  Hero,
+  Mission,
 } from "@graydigital/storybook";
 
 const IndexPage = (props: PageProps) => {
@@ -46,7 +46,7 @@ const IndexPage = (props: PageProps) => {
       />
       {/* TODO: Brands should be fed in from an external source. i.e. Headless CMS request */}
       <Brands />
-      <Hero link={{ text: "Our Mission", target: "/company" }} />
+      <Mission link={{ text: "Our Mission", target: "/company" }} />
       <Studies
         link={{
           text: "Explore Case Study",

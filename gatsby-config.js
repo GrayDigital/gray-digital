@@ -14,10 +14,6 @@ module.exports = {
     {
       resolve: "@chakra-ui/gatsby-plugin",
       options: {
-        /**
-         * @property {boolean} [resetCSS=true]
-         * if `false`, this plugin will not use `<CSSReset />
-         */
         resetCSS: true,
       },
     },
@@ -25,7 +21,7 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `ap1mxri861el`,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        accessToken: `rTwgJ6hxPN49dVUzep-yb4FeeITMe1TmVYhmnM1nIYg`,
       },
     },
     "gatsby-plugin-image",
