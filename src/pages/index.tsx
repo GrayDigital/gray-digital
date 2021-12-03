@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Link as GatsbyLink, PageProps } from "gatsby";
+import { Link, PageProps } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Box } from "@chakra-ui/react";
@@ -31,8 +31,10 @@ const IndexPage = (props: PageProps) => {
       contentfulBrands(contentful_id: { eq: "0ziBhkVyT4DbToTlNQ2Ng" }) {
         title
         images {
-          gatsbyImageData
-          title
+          gatsbyImageData(
+            width: 400
+          )
+          description
         }
       }
     }
@@ -49,13 +51,14 @@ const IndexPage = (props: PageProps) => {
         )}
         title={data.contentfulLandingPageHero.title.title}
         subtitle={data.contentfulLandingPageHero.subtitle.subtitle}
-        link={{ text: "Our Services", target: "/services" }}
+        Link={() => <Link to="/services">Our Services</Link>}
       />
+
       <Brands
         title={data.contentfulBrands.title}
         Logos={data.contentfulBrands.images.map((image) => {
           return (
-            <GatsbyImage image={getImage(image)} alt={image.description} />
+            () => (<GatsbyImage image={getImage(image)} alt={image.description} />)
           );
         })}
       />
