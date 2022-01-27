@@ -1,8 +1,11 @@
+// trunk-ignore(eslint/no-undef)
+// trunk-ignore(eslint/@typescript-eslint/no-var-requires)
 require("dotenv").config({
   // path: `.env.${process.env.NODE_ENV}`,
   path: `.env`,
 });
 
+// trunk-ignore(eslint/no-undef)
 module.exports = {
   siteMetadata: {
     title: `Gray Digital`,
