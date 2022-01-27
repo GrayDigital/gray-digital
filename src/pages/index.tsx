@@ -31,9 +31,7 @@ const IndexPage = (props: PageProps) => {
       contentfulBrands(contentful_id: { eq: "0ziBhkVyT4DbToTlNQ2Ng" }) {
         title
         images {
-          gatsbyImageData(
-            width: 400
-          )
+          gatsbyImageData(width: 400)
           description
         }
       }
@@ -57,8 +55,8 @@ const IndexPage = (props: PageProps) => {
       <Brands
         title={data.contentfulBrands.title}
         Logos={data.contentfulBrands.images.map((image) => {
-          return (
-            () => (<GatsbyImage image={getImage(image)} alt={image.description} />)
+          return () => (
+            <GatsbyImage image={getImage(image)} alt={image.description} />
           );
         })}
       />

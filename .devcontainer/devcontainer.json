@@ -20,9 +20,9 @@
   // "forwardPorts": [],
 
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "npm install && npm install -g aws-cdk@latest && aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID --profile default && aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY --profile default",
+  "postCreateCommand": "npm install",
 
   // Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-  "remoteUser": "node",
+  "remoteUser": "root",
   "features": {}
 }
