@@ -10,7 +10,7 @@
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@graydigital/storybook": "^0.0.24",
-    "gatsby": "^4.5.4",
+    "gatsby": "^4.6.1",
     "gatsby-cli": "^4.5.2",
     "gatsby-plugin-image": "2.6.0",
     "gatsby-plugin-sharp": "^4.5.2",
