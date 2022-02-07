@@ -6,7 +6,7 @@
   "author": "Ari Perez <ari@gray.digital>",
   "dependencies": {
     "@chakra-ui/gatsby-plugin": "^2.0.2",
-    "@chakra-ui/react": "^1.8.1",
+    "@chakra-ui/react": "^1.8.3",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@graydigital/storybook": "^0.0.24",
