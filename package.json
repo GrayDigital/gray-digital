@@ -12,7 +12,7 @@
     "@graydigital/storybook": "^0.0.24",
     "gatsby": "^4.5.4",
     "gatsby-cli": "^4.5.2",
-    "gatsby-plugin-image": "2.6.0",
+    "gatsby-plugin-image": "2.7.0",
     "gatsby-plugin-sharp": "^4.5.2",
     "gatsby-source-contentful": "^7.4.0",
     "gatsby-transformer-sharp": "^4.5.0",
